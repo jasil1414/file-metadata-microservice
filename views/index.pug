@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title URL Shortner
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  body
+    .container
+      h1 Jasil's File Metadata Microservice.
+      blockquote
+        p User Stories:
+        ul
+          li I can submit a FormData object that includes a file upload.
+          li When I submit something, I will receive the file size in bytes within the JSON response.
+          li Additionally I can also get information regarding file name on the user's computer, encoding type and mime type of the file.
+      br
+      br
+      form(method ="post", action="/filesize", enctype = "multipart/form-data")
+        label #[input(type="file", name="uploadFile")]
+        button.btn(type="submit", name="submitBtn") Submit
